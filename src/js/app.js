@@ -29,13 +29,25 @@ function render(variables = {}) {
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
+
+  let name = variables.name === null ? "Your Name" : variables.name;
+  let lastName= variables.lastName === null ? "Your LastName" : variables.lastName;
+  let Twitter = variables.twitter === null ? " " : variables.twitter;
+  let github= variables.github === null ? " " : variables.github;
+  let linkdin = variables.linkedin === null ? " " : variables.linkedin;
+  let instagram = variables.instagram === null ? " " : variables.instagram;
+  let role = variables.role === null ? " " : variables.role;
+  let city = variables.city === null ? " " : variables.city;
+  let country = variables.country === null ? " " : variables.country;
+
+ 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
-          <img src="${variables.avatarURL  }" class="photo" />
-          <h1>${variables.name ?? ""} ${variables.lastNamename ?? ""}</h1>
-          <h2>${variables.role ?? ""} </h2>
-          <h3>${variables.city ?? ""}${variables.contry ?? ""}</h3>
+          <img src="${variables.avatarURL }" class="photo" />
+          <h1>${variables.name } ${variables.lastName}</h1>
+          <h2>${variables.role }</h2>
+          <h3>${variables.city },${variables.country}</h3>
           <ul class=${variables.socialMediaPosition}">
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
