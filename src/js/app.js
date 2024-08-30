@@ -30,7 +30,7 @@ function render(variables = {}) {
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
 
-  let name = variables.name === null ? "Your Name" : variables.name;
+  variables.name === null ? "Your Name" : variables.name;
   let lastName= variables.lastName === null ? "Your LastName" : variables.lastName;
   let Twitter = variables.twitter === null ? " " : variables.twitter;
   let github= variables.github === null ? " " : variables.github;
@@ -40,7 +40,7 @@ function render(variables = {}) {
   let city = variables.city === null ? " " : variables.city;
   let country = variables.country === null ? " " : variables.country;
 
-  let socialMediaClass = variables.socialMediaPosition === "position-right" ? "position-right" : "position-left";
+    let socialMediaClass = variables.socialMediaPosition === "position-right" ? "position-right" : "position-left";
 
  
   // reset the website body with the new html output
