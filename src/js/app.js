@@ -33,7 +33,7 @@ function render(variables = {}) {
   variables.name === null ? "Your Name" : variables.name;
   let lastName= variables.lastName === null ? "Your LastName" : variables.lastName;
   let Twitter = variables.twitter === null ? " " : variables.twitter;
-  let github= variables.github === null ? " " : variables.github;
+  let github = variables.github === null ? " " : variables.github;
   let linkdin = variables.linkedin === null ? " " : variables.linkedin;
   let instagram = variables.instagram === null ? " " : variables.instagram;
   let role = variables.role === null ? " " : variables.role;
